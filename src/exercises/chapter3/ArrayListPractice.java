@@ -1,6 +1,7 @@
 package exercises.chapter3;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ArrayListPractice {
     public static int sumEvenNumbers(ArrayList<Integer> array) {
@@ -14,7 +15,27 @@ public class ArrayListPractice {
         }
     return sum;
     }
+
+    public static ArrayList<String> returnWordFromArrayList(ArrayList<String> array) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a word length (integer) to search for:");
+        int numCharacters = input.nextInt();
+        input.close();
+
+        ArrayList<String> retrievedWordsArrayList = new ArrayList();
+        for (String word : array){
+            if (word.length() == numCharacters) {
+                retrievedWordsArrayList.add(word);
+                System.out.println(word);
+            }
+
+        }
+        //System.out.println(retrievedWordsArrayList);
+        return retrievedWordsArrayList;
+    }
+
     public static void main(String[] args) {
+        //Integer Practice
         int[] integerArray = {1, 2, 1, 2, 1, 2, 1, 2, 1, 2};
         ArrayList<Integer> integerArrayList = new ArrayList<>();
         for (int integer : integerArray) {
@@ -22,6 +43,17 @@ public class ArrayListPractice {
         }
         int sumArrayList = ArrayListPractice.sumEvenNumbers(integerArrayList);
         System.out.println(sumArrayList);
+
+        //String Practice
+        ArrayList<String> words = new ArrayList<>();
+        words.add("Taco");
+        words.add("Trash");
+        words.add("Three");
+        words.add("Four");
+        words.add("Desk");
+        words.add("Taken");
+
+        ArrayListPractice.returnWordFromArrayList(words);
 
     }
 }
