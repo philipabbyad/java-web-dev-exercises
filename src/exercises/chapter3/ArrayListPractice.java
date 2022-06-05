@@ -16,7 +16,7 @@ public class ArrayListPractice {
     return sum;
     }
 
-    public static ArrayList<String> returnWordFromArrayList(ArrayList<String> array) {
+    public static void printWordsFromArrayList(ArrayList<String> array) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a word length (integer) to search for:");
         int numCharacters = input.nextInt();
@@ -30,8 +30,6 @@ public class ArrayListPractice {
             }
 
         }
-        //System.out.println(retrievedWordsArrayList);
-        return retrievedWordsArrayList;
     }
 
     public static void main(String[] args) {
@@ -53,7 +51,7 @@ public class ArrayListPractice {
         words.add("Desk");
         words.add("Taken");
 
-        ArrayListPractice.returnWordFromArrayList(words);
+        ArrayListPractice.printWordsFromArrayList(words);
 
     }
 }
