@@ -10,7 +10,7 @@ public class ConeComparator implements Comparator<Cone> {
     // 0: cone costs are equal
 
     public int compare(Cone cone1, Cone cone2) {
-        if ((cone1.getCost() - cone1.getCost()) > 0) {
+        if ((cone1.getCost() - cone2.getCost()) > 0) {
             return 1;
         } else if ((cone1.getCost() - cone2.getCost()) < 0) {
             return -1;
